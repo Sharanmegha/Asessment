@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dropdown</title>
+</head>
+
+<body>
+  <div>
+    Select your Device: <select name="devices" id="devices" onchange="devices()">
+      <option selected="" value="Default">--Select--</option>
+      <option value="Laptop">Laptop</option>
+      <option value="Mobile">Mobile</option>
+      <option value="TV">TV</option>
+      <option value="Tab">Tab</option>
+    </select>
+  </div>
+
+  <br>
+  <div> <span id="display"></span></div>
+
+  <script>
+    function devices() {
+      var name = document.getElementById("devices").value;
+      if (name == "Laptop") {
+        var Types = [ 'Lenova', 'Sony', 'HP'];
+        document.getElementById("display").innerHTML = Types.join("<br>");
+
+      } else if (name == "Mobile") {
+        var Types = ['iPhone', 'Samsung', 'Sony'];
+        document.getElementById("display").innerHTML = Types.join("<br>");
+      } else if (name == "TV") {
+        var Types = ['Samsung', 'LG', 'Onida'];
+        document.getElementById("display").innerHTML = Types.join("<br>");
+      } else if (name == "Tab") {
+        var Types = ['iphone', 'Motorola', 'Realme'];
+        document.getElementById("display").innerHTML = Types.join("<br>");
+      }
+    }
+  </script>
+</body>
+
+</html>
